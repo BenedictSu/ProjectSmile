@@ -1,12 +1,30 @@
 <html>
-	<!-- right on top of the page -->
-	<title>
-		Project Smile - Home
-	</title>
+	<head>
+		<!-- right on top of the page -->
+		<title>
+			Project Smile - Home
+		</title>
+		<style>
+			body {
+				background-color: #FFFFCC;
+			}
+			.logo {
+				text-align: center;
+				font-family: 'Shadows Into Light', cursive;
+				font-size: 3em;
+				color: #ff0000;	
+			}
+			.header {
+				text-align: center;
+				font-size: 2em;
+				color: #0000ff;	
+			}
+		</style>
+	</head>
 	<!-- main body -->
 	<body>
 		<div>
-			<h1>
+			<h1 class = "logo";>
 				Project Smile
 			</h1>
 			<p>
@@ -14,7 +32,7 @@
 			</p>
 		</div>
 		<div>
-			<h2>
+			<h2 class = "header";>
 				Original Text:
 			</h2>
 			<div id = "Original Text">
@@ -23,14 +41,14 @@
 						Enter original text here
 						<textarea required name = "text" rows = "10" cols = "50" placeholder = "Enter original text that you wish to change here.">
 						</textarea>
+						<input type = "submit" value = "change">
 					</label>
-					<input type = "submit" value = "change">
 				</form>
 			</div>
 		</div>
 		<div>
-			<h3>
-				Template
+			<h3 class = "header";>
+				Template:
 			</h3>
 			<div id = "Template Name">
 				<form action = "http://www.google.com/search">

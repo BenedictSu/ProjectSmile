@@ -19,6 +19,11 @@
 				font-size: 2em;
 				color: #0000ff;	
 			}
+			.body {
+				text-align: center;
+				font-size: 1em;
+				color: #00FF00;	
+			}
 		</style>
 	</head>
 	<!-- main body -->
@@ -27,7 +32,7 @@
 			<h1 class = "logo";>
 				Project Smile
 			</h1>
-			<p>
+			<p class = "body";>
 				Project Smile by Double-Bees will kick off an era of crazy text formatting which can destroy all existing standard definitions!
 			</p>
 		</div>
@@ -38,8 +43,23 @@
 			<div id = "Original Text">
 				<script type = "text/javascript">
 					function changeWords () {
+						var sadTemplate = [];
+						sadTemplate["once"] = "FOREVER";
+						sadTemplate["watch"] = "PEER";
+						sadTemplate["end"] = "BEGIN";
 						var originalText = document.getElementById("oriText").value;
-						alert("The original text is: " + originalText);
+						var textArray = originalText.split(" ");
+						var changedText = "";
+						for (i = 0; i < textArray.length; i++) {
+							var oriWord = textArray[i];
+							var word = sadTemplate[oriWord];
+							if (word != undefined) {
+								changedText = changedText + word + " ";
+							} else {
+								changedText = changedText + oriWord + " ";
+							}
+						}
+						alert("The changed text is: " + changedText);
 					}
 				</script>
 				<form onSubmit = "JavaScript:changeWords()">
@@ -56,11 +76,8 @@
 			<h3 class = "header";>
 				Template:
 			</h3>
-			<div id = "Template Name">
-				<form action = "http://www.google.com/search">
-					<input name = "text">
-					<input type = "submit">
-				</form>
+			<div id = "Template Name"; class = "body";>
+				SAD TEMPLATE
 			</div>
 		</div>
 	</body>

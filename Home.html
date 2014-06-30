@@ -36,10 +36,16 @@
 				Original Text:
 			</h2>
 			<div id = "Original Text">
-				<form action = "shout">
+				<script type = "text/javascript">
+					function changeWords () {
+						var originalText = document.getElementById("oriText").value;
+						alert("The original text is: " + originalText);
+					}
+				</script>
+				<form onSubmit = "JavaScript:changeWords()">
 					<label>
-						Enter original text here
-						<textarea required name = "text" rows = "10" cols = "50" placeholder = "Enter original text that you wish to change here.">
+						Enter original text here: 
+						<textarea required name = "text" id = "oriText" rows = "10" cols = "50" placeholder = "Enter original text that you wish to change here.">
 						</textarea>
 						<input type = "submit" value = "change">
 					</label>

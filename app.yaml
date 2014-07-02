@@ -6,6 +6,9 @@ threadsafe: true
 
 handlers:
 
+- url: /javascripts
+  static_dir: templates/javascripts
+
 # Handler for all pages
 - url: /.*
   script: front.app

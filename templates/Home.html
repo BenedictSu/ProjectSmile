@@ -1,6 +1,5 @@
 <html>
 	<head>
-		<meta name="viewport" content = "width=device-width, initial-scale=1">
 		<!-- right on top of the page -->
 		<title>
 			Project Smile - Home
@@ -45,12 +44,19 @@
 				Original Text:
 			</h2>
 			<div id = "Original Text">
-				<script src = "javascripts/change.js" type = "text/javascript">
+				<script src = "change().js" type = "text/javascript">
 				</script>
-				<form onSubmit = "JavaScript:changeWords()">
+				<script type="text/javascript">
+					var template = "";
+					function tempChange(val){
+						template = val;
+					}
+				</script>
+				<form onSubmit = "changeWords(template)">
 					<label>
 						Enter original text here: 
-						<textarea required name = "text" id = "oriText" rows = "10" cols = "50" placeholder = "Enter original text that you wish to change here."></textarea>
+						<textarea required name = "text" id = "oriText" rows = "10" cols = "50" placeholder = "Enter original text that you wish to change here.">
+						</textarea>
 						<input type = "submit" value = "change">
 					</label>
 				</form>
@@ -60,9 +66,11 @@
 			<h3 class = "header";>
 				Template:
 			</h3>
-			<div id = "Template Name"; class = "body";>
-				SAD TEMPLATE
-			</div>
+			<form id = "Template Name" class = "body">
+				<input type = "radio" onchange = "tempChange('sad')" >SAD TEMPLATE<br>
+				<input type = "radio" onChange = "tempChange('simple')" >SIMPLE TEMPLATE
+				
+			</form>
 		</div>
 	</body>
 </html>

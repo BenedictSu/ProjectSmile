@@ -13,80 +13,67 @@
     <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="../stylesheet/cover.css">
+    <link href="stylesheet/justified-nav.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 
   </head>
 
   <body>
 
-    <div class="site-wrapper">
+    <div class="container">
 
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Double Bees</h3>
-				<!-- Top bar -->
-				 <div class="row top-container">
-					<div class="span4 offset8 signin-align">
+      <div class="masthead">
+        <div class="row">
+	   <div class="col-lg-8">
+        <h3 class="text-muted">Double Bees</h3></div>
+		<div class="col-lg-4">
+		<h3 class="span4 offset8 signin-align">
 						<span> {{ user_mail }} <a href="{{ logout }}">logout</a></span>
-					</div>
-				</div>
-				<!-- End of top bar -->
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Main</a></li>
-                <li><a href="#">Sad Template</a></li>
-                <li><a href="#">Simple Template</a></li>
-              </ul>
-            </div>
-          </div>
+					</h3></div>
+		</div>
+        <ul class="nav nav-justified">
+          <li class="active"><a href="#">Main</a></li>
+          <li><a href="#">Sad Template</a></li>
+          <li><a href="#">Simple Template</a></li>
+        </ul>
+      </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Project Smile</h1>
-            <p class="lead">Project Smile by Double-Bees will kick off an era of crazy text formatting which can destroy all existing standard definitions!</p>
-            <!--<p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>-->
-			<div>
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Project Smile</h1>
+        <p class="lead">Project Smile by Double-Bees will kick off an era of crazy text formatting which can destroy all existing standard definitions!</p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-8">
 			<h2 class = "header";>
 				Original Text:
 			</h2>
 			<div id = "Original Text">
 				<form onSubmit = "changeWords(template)">
 					<label>
-						<textarea style="color: yellow; background-color: black" required name = "text" id = "oriText" rows = "10" cols = "50" placeholder = "Enter original text that you wish to change here."></textarea>
+						<textarea style="color: yellow; background-color: black" required name = "text" id = "oriText" rows = "10" cols = "80" placeholder = "Enter original text that you wish to change here."></textarea>
 						<div><input style="color: white; background-color: grey" type = "submit" value = "change"></div>
 					</label>
 				</form>
 			  </div>
 			</div>
-			<div>
-			<h3 class = "header";>
+        <div class="col-lg-4">
+          <h3 class = "header";>
 				Template:
 			</h3>
 			<form name="myForm" id = "Template Name" class = "body">
 				<input type="radio" name="myRadios"  value="1" onchange = "tempChange(1)" >SAD TEMPLATE<br>
 				<input type="radio" name="myRadios"  value="2" onChange = "tempChange(2)" >SIMPLE TEMPLATE
 			</form>
-		</div>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>This page uses cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
-
-        </div>
-
+       </div>
       </div>
 
-    </div>
+    </div> <!-- /container -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -96,8 +83,5 @@
 	<script src = "javascripts/noTemplate.js"></script>
 	<script src = "javascripts/sadTemplate.js"></script>
 	<script src = "javascripts/simpleTemplate.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../bootstrap/docs/assets/js/docs.min.js"></script>
   </body>
 </html>

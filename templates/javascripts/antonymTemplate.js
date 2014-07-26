@@ -41,9 +41,9 @@ function antonymTemplate() {
 	var changedText = "";
 	for (i = 0; i < textArray.length; i++) {
 		var oriWord = textArray[i];
-		var word = database[oriWord];
+		var word = data[oriWord];
 		if (word != undefined) {
-			changedText = changedText + word + " ";
+			changedText = changedText + word.toUpperCase() + " ";
 		} else {	
 			changedText = changedText + oriWord + " ";
 		}

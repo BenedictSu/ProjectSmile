@@ -1,72 +1,84 @@
-<html>
-	<head>
-		<meta name="viewport" content = "width=device-width, initial-scale=1">
-		<!-- right on top of the page -->
-		<title>
-			Project Smile - Home
-		</title>
-		<style>
-			body {
-				background-color: #FFFFCC;
-			}
-			.logo {
-				text-align: center;
-				font-family: 'Shadows Into Light', cursive;
-				font-size: 3em;
-				color: #ff0000;	
-			}
-			.header {
-				text-align: center;
-				font-size: 2em;
-				color: #0000ff;	
-			}
-			.body {
-				text-align: center;
-				font-size: 1em;
-				color: #00FF00;	
-			}
-			.content {
-				clear: both;
-			}
-		</style>
-	</head>
-	<!-- main body -->
-	<body>
-		<div>
-			<h1 class = "logo";>
-				Project Smile
-			</h1>
-			<p class = "body";>
-				Project Smile by Double-Bees will kick off an era of crazy text formatting which can destroy all existing standard definitions!
-			</p>
-		</div>
-		<div>
-			<h2 class = "header";>
-				Original Text:
-			</h2>
-			<div id = "Original Text">
-				<script src = "javascripts/change.js"></script>
-				<script src = "javascripts/variables.js"></script>
-				<script src = "javascripts/noTemplate.js"></script>
-				<script src = "javascripts/sadTemplate.js"></script>
-				<script src = "javascripts/simpleTemplate.js"></script>
-				<form onSubmit = "changeWords(template)">
-					<label>
-						Enter original text here: 
-						<textarea required name = "text" id = "oriText" rows = "10" cols = "50" placeholder = "Enter original text that you wish to change here."></textarea>
-						<input type = "submit" value = "change">
-					</label>
-				</form>
-			</div>
-		</div>
-		<div>
-			<h3 class = "header";>
-				Template:
-			</h3>
-			<form name="myForm" id = "Template Name" class = "body">
-				<input type="radio" name="myRadios"  value="1" onchange = "tempChange(1)" >SAD TEMPLATE<br>
-				<input type="radio" name="myRadios"  value="2" onChange = "tempChange(2)" >SIMPLE TEMPLATE
-			</form>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project Smile - Main</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../stylesheet/cover.css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Double Bees</h3>
+			  <!-- Top bar -->
+				 <div class="row top-container">
+					<div class="span3 offset9 signin-align">
+						<span> Login with <a href="/main"><img src="http://icons.iconarchive.com/icons/danleech/simple/24/google-icon.png"></a></span>
+					</div>
+				</div>
+				<!-- End of top bar -->
+              <div>
+				  <ul class="nav masthead-nav">
+					<li class="active"><a href="#">Main</a></li>
+					<li><a href="#">Sad Template</a></li>
+					<li><a href="#">Simple Template</a></li>
+				  </ul>
+			  </div>
+            </div>
+			
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Project Smile</h1>
+            <p class="lead">Project Smile by Double-Bees will kick off an era of crazy text formatting which can destroy all existing standard definitions!</p>
+            <!--<p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>-->
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>This page uses cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src = "javascripts/change.js"></script>
+	<script src = "javascripts/variables.js"></script>
+	<script src = "javascripts/noTemplate.js"></script>
+	<script src = "javascripts/sadTemplate.js"></script>
+	<script src = "javascripts/simpleTemplate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/docs/assets/js/docs.min.js"></script>
+  </body>
 </html>

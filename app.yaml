@@ -17,7 +17,7 @@ handlers:
   static_dir: bootstrap
 
 # Handler for Home Page
-- url: /.*
+- url: /
   script: front.app
   
 # All other pages require login

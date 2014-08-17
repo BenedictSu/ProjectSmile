@@ -46,5 +46,5 @@ function simpleTemplate() {
 			changedText = changedText + oriWord + " ";
 		}
 	}
-	alert("The changed text is: " + changedText);
+	alert("The original text is: " + originalText + "\n\n" + "The changed text is: " + changedText);
 }

@@ -8,9 +8,6 @@ handlers:
   
 - url: /stylesheet
   static_dir: stylesheet
-  
-- url: /javascripts
-  static_dir: templates/javascripts
 
 # Twitter Bootstrap
 - url: /bootstrap

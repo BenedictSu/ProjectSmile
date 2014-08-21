@@ -47,40 +47,69 @@
       </div>
 
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-lg-8">
-			<h2 class = "header";>
-				Original Text:
-			</h2>
-			<div id = "Original Text">
-				<form onSubmit = "changeWords(template)">
-					<label>
-						<textarea style="color: yellow; background-color: black" required name = "text" id = "oriText" rows = "10" cols = "80" placeholder = "Enter original text that you wish to change here."></textarea>
-						<div><input style="color: white; background-color: grey" type = "submit" value = "change"></div>
-					</label>
+	<form action="/main" method="post">
+	<fieldset>
+		<div class="row">
+			<div class="col-lg-8">
+				<h2 class = "header";>
+					Original Text:
+				</h2>
+				<label>
+					<textarea class="input-block-level" style="color: yellow; background-color: black" required name = "text" id = "oriText" rows = "10" cols = "80" placeholder = "Enter original text that you wish to change here."></textarea>
+					<div><input style="color: white; background-color: grey" type="submit" value = "change"></div>
+				</label>
+				</div>
+			<div class="col-lg-4">
+			  <h3 class = "header";>
+					Template:
+				</h3>
+				<form name="myForm" id = "Template Name" class = "body">
+					<input type="radio" name="myRadios"  value="1">ANTONYM TEMPLATE<br>
+					<input type="radio" name="myRadios"  value="2">SIMPLE TEMPLATE
 				</form>
-			  </div>
-			</div>
-        <div class="col-lg-4">
-          <h3 class = "header";>
-				Template:
-			</h3>
-			<form name="myForm" id = "Template Name" class = "body">
-				<input type="radio" name="myRadios"  value="1" onchange = "tempChange(1)" >ANTONYM TEMPLATE<br>
-				<input type="radio" name="myRadios"  value="2" onChange = "tempChange(2)" >SIMPLE TEMPLATE
-			</form>
-       </div>
-      </div>
+		   </div>
+		</div>
+	</fieldset>
+	</form>
+    
+    <br><br><br>
+	<div class="row">
+    <h2 class="header";> Results: </h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th width="40%">Original Text</th>
+            <th width="40%">Changed Text</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.item_link }} </td>
+				<td>{{ item.image_link }} </td>
+                <td>{{ item.date.strftime('%Y-%m-%d')  }} <br>
 
+                    <form action="/deleteitem" method="post">
+                        <input type="hidden" name="itemid" value="{{ item.item_id }}">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+	</div>	  
+	  
     <br><br><br>
     <div class="row">
         <div class="col-lg-4">
           <h2>About</h2>
-          <p>Project Smiles is a tool for users to magically tranform a piece of text into one with a whole new meaning base on their wishes. This project aims to let people quickly and efficiently paraphrase words automatically by applying a set of templates to the text. </p>
+          <p>Project Smiles is a tool for users to magically transform a piece of text into one with a whole new meaning base on their wishes. This project aims to let people quickly and efficiently paraphrase words automatically by applying a set of templates to the text. </p>
         </div>
         <div class="col-lg-4">
           <h2>How to Start</h2>
-          <p><b>First</b>, you have to log in with your google account. </p>
+          <p><b>First</b>, you have to log in with your Google account. </p>
           <p><b>Secondly</b>, select the template of your choosing by clicking on the radio buttons.</p>
           <p><b>Thirdly</b>, type in the text box, or copy and paste in a piece of text and click "Change".</p>
           <p><b>Lastly</b>, watch the magic work!</p>
@@ -96,10 +125,5 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	<script src = "javascripts/change.js"></script>
-	<script src = "javascripts/variables.js"></script>
-	<script src = "javascripts/noTemplate.js"></script>
-	<script src = "javascripts/antonymTemplate.js"></script>
-	<script src = "javascripts/simpleTemplate.js"></script>
   </body>
 </html>
